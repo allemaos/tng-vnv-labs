@@ -1,0 +1,8 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+#randomizing the endpoint in order to use multiple client instances in localhost
+  port: ${PORT:0}
+

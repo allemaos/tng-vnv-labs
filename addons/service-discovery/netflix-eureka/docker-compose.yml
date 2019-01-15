@@ -1,0 +1,10 @@
+version: '3'
+services:
+    eureka-service:
+        build: eureka-service
+        ports:
+            - "8761:8761"
+    eureka-client:
+        build: eureka-client
+        links:
+            - eureka-service

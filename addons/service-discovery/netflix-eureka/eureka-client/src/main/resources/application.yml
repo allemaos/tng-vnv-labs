@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: docker
+  application:
+    name: eureka-client
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#management.endpoints.jmx.exposure.include: health,info, metrics
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: Eureka client probe
+  description: This is a netflix eureka client probe from 5GTANGO VnV Labs
+  version: 1.0.0
