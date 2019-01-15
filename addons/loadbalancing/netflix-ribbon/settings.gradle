@@ -1,0 +1,5 @@
+rootProject.name = 'netflix-eureka'
+
+include 'eureka-service'
+include 'ribbon-client'
+include 'ribbon-user'

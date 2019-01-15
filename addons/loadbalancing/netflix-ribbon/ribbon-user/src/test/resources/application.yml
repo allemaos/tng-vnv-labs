@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ribbon-client
+#server:
+  #port: ${PORT:0}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#management.endpoints.jmx.exposure.include: health,info, metrics
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: Spring Sample Application
+  description: This is my first spring boot application
+  version: 1.0.0
+

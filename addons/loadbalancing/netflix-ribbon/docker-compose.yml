@@ -1,0 +1,16 @@
+version: '3'
+services:
+    eureka-service:
+        build: eureka-service
+        ports:
+            - "8761:8761"
+    ribbon-client:
+        build: ribbon-client
+        links:
+            - eureka-service
+    user:
+      build: ribbon-user
+      links:
+            - eureka-service
+      ports:
+            - "8888:8888"

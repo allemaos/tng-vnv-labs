@@ -1,0 +1,4 @@
+server:
+#randomizing the endpoint in order to use multiple client instances in localhost
+#  port: ${PORT:0}
+  port: 9090
