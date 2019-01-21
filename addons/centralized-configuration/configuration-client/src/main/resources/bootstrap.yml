@@ -1,0 +1,21 @@
+spring.application.name: a-bootiful-client
+
+gk.base.url:
+  ath:
+    pre: http://pre-sp-ath.5gtango.eu:32002/api/v3
+    stag: http://stag-sp-ath.5gtango.eu:32002/api/v3
+    qual: http://qual-sp-ath.5gtango.eu:32002/api/v3
+    prod: http://prod-sp-ath.5gtango.eu:32002/api/v3
+  bcn:
+    pre: http://pre-sp-bcn.5gtango.eu:32002/api/v3
+    stag: http://stag-sp-bcn.5gtango.eu:32002/api/v3
+    qual: http://qual-sp-bcn.5gtango.eu:32002/api/v3
+    prod: http://prod-sp-bcn.5gtango.eu:32002/api/v3
+  ave.qual: http://qual-sp-ave.5gtango.eu:32002/api/v3
+
+
+app.gk.base.url: ${gk.base.url.bcn.qual}
+
+
+# N.B. this is the default:
+spring.cloud.config.uri: http://localhost:8800
