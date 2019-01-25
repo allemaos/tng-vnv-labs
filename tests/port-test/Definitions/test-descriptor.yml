@@ -28,7 +28,7 @@ test_storyline:
         test_step_command: "run"
         test_step_index: "3"
         test_step_inline_call: ""
-        test_step_inline_call_definition: "bash/Dockerfile/docker-compose/etc"
+        test_step_inline_call_definition: "" #(bash/Dockerfile/docker-compose/etc)
         test_step_managment_command: ""
         test_step_command_arg: "${workspace.absolutePath}/config.cfg"
         test_step_options:
