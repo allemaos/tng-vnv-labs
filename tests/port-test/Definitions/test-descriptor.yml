@@ -38,7 +38,7 @@ test_storyline:
                 value: "tee:/workspace"
               - option: "e"
                 value: "FOO='way to passing environment parameters!'"
-        test_configuration:
+        test_step_configuration:
               - parameter_name: "config_file"
                 parameter_definition: "location of the test configuration file?? GeorgeA: do we still need this??"
                 parameter_value: "config.cfg"
