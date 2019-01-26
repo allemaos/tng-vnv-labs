@@ -10,7 +10,7 @@ test_storyline:
         test_step_image: ""
         test_step_definition: "just testing inline calls."
         test_step_command: "pull"
-        test_step_index: "1
+        test_step_index: "1"
         test_step_inline_call: "docker pull sonatanfv/tng-wrk"
         test_step_inline_call_definition: "bash" #(bash/Dockerfile/docker-compose/etc)
 
