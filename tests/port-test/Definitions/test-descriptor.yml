@@ -5,45 +5,47 @@ version: "0.1"
 author: "AR, ALB"
 description: >
   "Test descriptor for connectivity tests"
-test_storyline:
-      - test_step_name: "INLINE DOCKER CALLS"
-        test_step_image: ""
-        test_step_definition: "just testing inline calls."
-        test_step_command: "pull"
-        test_step_index: "1"
-        test_step_inline_call: "docker pull sonatanfv/tng-wrk"
-        test_step_inline_call_definition: "bash" #(bash/Dockerfile/docker-compose/etc)
+test_scenarios:
+  - test_scenario_name: "FIRST TEST SCENARIO"
+    test_scenario_definition: "There might be multiple testing scenario's for instance such as multi conditional testings"
+    - test_steps:
+        - test_step_name: "INLINE DOCKER CALLS"
+          test_step_image: ""
+          test_step_definition: "just testing inline calls."
+          test_step_command: "pull"
+          test_step_index: "1"
+          test_step_inline_call: "docker pull sonatanfv/tng-wrk"
+          test_step_inline_call_definition: "bash" #(bash/Dockerfile/docker-compose/etc)
 
-      - test_step_name: "PULL CONTAINER"
-        test_step_image: "sonatanfv/tng-wrk"
-        test_step_definition: "pull the probe's container"
-        test_step_command: "pull"
-        test_step_index: "2"
-        test_step_inline_call: ""
-        test_step_inline_call_definition: ""
+        - test_step_name: "PULL CONTAINER"
+          test_step_image: "sonatanfv/tng-wrk"
+          test_step_definition: "pull the probe's container"
+          test_step_command: "pull"
+          test_step_index: "2"
+          test_step_inline_call: ""
+          test_step_inline_call_definition: ""
 
-      - test_step_name: "RUN PROBE'S CONTAINER"
-        test_step_image: "sonatanfv/tng-wrk"
-        test_step_definition: "There might be an issue with the special characters of absolute path. Is there any??????"
-        test_step_command: "run"
-        test_step_index: "3"
-        test_step_inline_call: ""
-        test_step_inline_call_definition: "" #(bash/Dockerfile/docker-compose/etc)
-        test_step_managment_command: ""
-        test_step_command_arg: "${workspace.absolutePath}/config.cfg"
-        test_step_options:
-              - option: "rm"
-                value: ""
-              - option: "v"
-                value: "tee:/workspace"
-              - option: "e"
-                value: "FOO='way to passing environment parameters!'"
-        test_step_configuration:
-              - parameter_name: "config_file"
-                parameter_definition: "location of the test configuration file?? GeorgeA: do we still need this??"
-                parameter_value: "config.cfg"
-                content_type: "text/plain"
-
+        - test_step_name: "RUN PROBE'S CONTAINER"
+          test_step_image: "sonatanfv/tng-wrk"
+          test_step_definition: "There might be an issue with the special characters of absolute path. Is there any??????"
+          test_step_command: "run"
+          test_step_index: "3"
+          test_step_inline_call: ""
+          test_step_inline_call_definition: "" #(bash/Dockerfile/docker-compose/etc)
+          test_step_managment_command: ""
+          test_step_command_arg: "${workspace.absolutePath}/config.cfg"
+          test_step_options:
+                - option: "rm"
+                  value: ""
+                - option: "v"
+                  value: "tee:/workspace"
+                - option: "e"
+                  value: "FOO='way to passing environment parameters!'"
+          test_step_configuration:
+                - parameter_name: "config_file"
+                  parameter_definition: "location of the test configuration file?? GeorgeA: do we still need this??"
+                  parameter_value: "config.cfg"
+                  content_type: "text/plain"
 test_category:
     - category_type: performance
 
